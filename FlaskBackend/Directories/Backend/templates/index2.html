@@ -1,0 +1,89 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+.image-result{
+ float:left;
+  margin:10px;
+  width:300px;
+  height:300px;
+
+
+}
+
+.information{
+
+ float:left;
+  margin:10px;
+  width:400px;
+  height:300px;
+
+  background:#331a00
+}
+
+.result-page{
+      margin: auto;
+	  position: center;
+      width:800px;
+      height:500px;
+      border:1px solid black;
+      padding:10px;
+     // opacity: 0.5;
+   background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+body{
+  background-image: url("/static/img/green.jpg");
+
+    /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  background-color: #64a554;
+}
+p{
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+</style>
+</head>
+    <body>
+     <h1>Plant Leaves Diseases Classification </h1>
+    <div class="result-page">
+
+        <div class="image-result">
+          <img src={{data.url}} class="img-rounded" alt="Cinque Terre" width="300" height="300">
+        </div>
+
+        <div class="information">
+               <ul>
+                   <br>
+                   <br><br>
+                <p> prediction:  {{data.prediction}} </p>
+                <p>Result: {{data.confidence}}</p>
+
+               </ul>
+        </div>
+
+     </div>
+
+
+
+    </body>
+</html>

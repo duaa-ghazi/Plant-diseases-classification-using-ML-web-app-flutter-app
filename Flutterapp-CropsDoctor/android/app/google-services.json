@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "240076677823",
+    "firebase_url": "https://farmer-chat-deee0.firebaseio.com",
+    "project_id": "farmer-chat-deee0",
+    "storage_bucket": "farmer-chat-deee0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240076677823:android:056627091c73af6db15c0a",
+        "android_client_info": {
+          "package_name": "co.duaa.Crops_diagnosis"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "240076677823-6jfhtrp2vok5jco18d66sr4dkuijiuvl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZzBFHK49_NKO5P8QloBm7ifu9NPLvN8A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "240076677823-6jfhtrp2vok5jco18d66sr4dkuijiuvl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

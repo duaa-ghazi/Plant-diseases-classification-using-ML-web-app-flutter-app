@@ -1,0 +1,174 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.text-center{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.profile-images-card{
+	margin: auto;
+	display: table;
+	background: #fff;
+	padding: 50px 50px;
+	box-shadow: 0px 0px 5px #ddd
+	text-align: center;
+
+}
+
+.profile-images{
+	width: 300px;
+	height:300px;
+	background: #fff;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.profile-images img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+body{
+  background-image: url("/static/img/green.jpg");
+
+    /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin: 0;
+}
+
+.form {
+
+  position: relative;
+  z-index: 1;
+  background:  rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 5;
+  margin: 0 0 15px;
+  padding: 15px;
+  //box-sizing: border-box;
+  font-size: 16px;
+}
+.form button {
+  display: inline-block;
+    padding: 16px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #64a554;
+    font-size: 16px;
+    color: #fff;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+
+.container {
+
+ display: flex;
+  align-items: center;
+  justify-content: center;
+ max-width: 500px;
+}
+
+.container2 {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+input[type="file"] {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  font-size: 15px;
+  color: rgb(153,153,153);
+}
+
+.button-wrap {
+  position: relative;
+}
+
+.new-button {
+    display: inline-block;
+    padding: 20px 22px;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #64a554;
+    font-size: 16px;
+    color: #fff;
+    border: 5;
+
+}
+.new-button:hover,.new-button:active,.new-button:focus {
+  background: #43A047;
+}
+.register-page{
+  width:300px;
+  padding: 0 0 0;
+  margin: auto;
+ }
+
+h1{
+  color: white;
+  text-align: center;
+  background-color: #64a554;
+}
+</style>
+</head>
+    <body>
+    <h1>Plant Leaves Diseases Classification </h1>
+    <div class="register-page">
+            <div class="profile-images">
+            <img src="/static/img/upload.png" id="upload-img">
+            </div>
+
+           <div class="form">
+            <form class="register-form" method="POST" action="/predict" enctype="multipart/form-data">
+                <div class="container2">
+                <div class="button-wrap">
+                   <input type="file" name="file" id="file" accept="image/*" >
+                    <label for="file" class="new-button">Choose a Photo</label>
+                        </div>
+                            </div>
+                <button>Predict</button>
+            </form>
+           </div>
+
+
+     </div>
+
+<script>
+	$(function(){
+		$("#file").change(function(event) {
+			var x = URL.createObjectURL(event.target.files[0]);
+			$("#upload-img").attr("src",x);
+			console.log(event);
+		});
+	})
+</script>
+    </body>
+</html>
