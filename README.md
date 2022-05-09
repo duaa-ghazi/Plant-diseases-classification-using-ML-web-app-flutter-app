@@ -1,0 +1,2 @@
+# Plant-diseases-classification-using-ML-web-app-flutter-app
+My project plan was based on an image dataset of the leaves of a specific group of crops called "Plant Village". I used this dataset to build four custom trained models using machine learning (ML) techniques. Next, I deployed these custom ML models to make them available to the end-users. These models are accessible via a website and via a nice android mobile application using Flutter
